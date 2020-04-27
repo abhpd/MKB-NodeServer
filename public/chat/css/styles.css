@@ -1,4 +1,4 @@
-a{
+a{ 
     color: black;
 }
 a:hover{
@@ -6,6 +6,8 @@ a:hover{
     text-decoration: none;
 }
 body{
+  background-color: #dddddd;
+  background-color: #f6f6f6;
 }
 h1{
     font-family: 'Montserrat-black',sans-serif;
@@ -96,7 +98,7 @@ h1{
     clear: both;
     overflow: hidden;
     margin-bottom: 20px;
-    transition: all 0.5s linear;
+    transition: all 0.2s linear;
     opacity: 0;
   }
   .messages .message.left .avatar {

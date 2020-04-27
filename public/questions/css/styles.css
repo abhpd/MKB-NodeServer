@@ -32,7 +32,8 @@ h1{
     padding-right: 10%;
     padding-left: 10%;
     padding-bottom: 30px;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: saturate(180%) blur(20px);
 }
 .navbar h1{
     font-family: 'Montserrat-black',sans-serif;
@@ -146,6 +147,9 @@ input:checked + label {
 .thankyou-submit button{
     position: relative;
     bottom: 20%;
+}
+.top-banner{
+    height: 38vh;
 }
 /* Question bg color */
 

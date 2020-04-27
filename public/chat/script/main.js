@@ -1,58 +1,60 @@
 (function () {
     var Message;
     Message = function (arg) {
-        this.text = arg.text, this.message_side = arg.message_side;
-        this.draw = function (_this) {
+        (this.text = arg.text), (this.message_side = arg.message_side);
+        this.draw = (function (_this) {
             return function () {
                 var $message;
-                $message = $($('.message_template').clone().html());
-                $message.addClass(_this.message_side).find('.text').html(_this.text);
-                $('.messages').append($message);
+                $message = $($(".message_template").clone().html());
+                $message
+                    .addClass(_this.message_side)
+                    .find(".text")
+                    .html(_this.text);
+                $(".messages").append($message);
                 return setTimeout(function () {
-                    return $message.addClass('appeared');
+                    return $message.addClass("appeared");
                 }, 0);
             };
-        }(this);
+        })(this);
         return this;
     };
-    
+
     $(function () {
         var getMessageText, message_side, sendMessage;
-        message_side = 'right';
+        message_side = "right";
         getMessageText = function () {
             var $message_input;
-            $message_input = $('.message_input');
+            $message_input = $(".message_input");
             return $message_input.val();
         };
         sendMessage = function (text) {
             var $messages, message;
-            if (text.trim() === '') {
+            if (text.trim() === "") {
                 return;
             }
-            $('.message_input').val('');
-            $messages = $('.messages');
-            message_side = message_side === 'left' ? 'right' : 'left';
+            $(".message_input").val("");
+            $messages = $(".messages");
+            message_side = message_side === "left" ? "right" : "left";
             message = new Message({
                 text: text,
-                message_side: message_side
+                message_side: message_side,
             });
             message.draw();
-            return $messages.animate({ scrollTop: $messages.prop('scrollHeight') }, 300);
+            return $messages.animate(
+                { scrollTop: $messages.prop("scrollHeight") },
+                300
+            );
         };
-        $('.send_message').click(function (e) {
+        $(".send_message").click(function (e) {
             return sendMessage(getMessageText());
         });
-        $('.message_input').keyup(function (e) {
+        $(".message_input").keyup(function (e) {
             if (e.which === 13) {
                 return sendMessage(getMessageText());
             }
         });
-        sendMessage('Hello Philip! :)');
-        setTimeout(function () {
-            return sendMessage('Hi Sandy! How are you?');
-        }, 1000);
-        return setTimeout(function () {
-            return sendMessage('I\'m fine, thank you!');
-        }, 2000);
+        sendMessage(
+            "Sometimes, talking about your problems may not give you the solutions to them, but they help you clean the fog off your brain and see clearly. And who better to talk to than someone who is in the same boat as you, would understand your situation, and never judge!"
+        );
     });
 }.call(this));

@@ -3,23 +3,27 @@ const https = require("https");
 
 const app = express();
 
+var path = require('path');
+
 
 //static-middlewares
 
 app.use('/',express.static(__dirname+'/public'));
 app.use('/knowmore',express.static(__dirname+'/knowmore'))
+
 app.use('/login',express.static(__dirname+'/public/login'));
-
-
 app.use('/questionnaire',express.static(__dirname+'/public/questions'));
 app.use('/chat',express.static(__dirname+'/public/chat'));
+app.use('/results',express.static(__dirname+'/public/results'));
+
+//express.static(path.join(__dirname,"public")); //not working unfortunately
 
 //------- GET ROUTES --------//
 
 //Homepage
 app.get("/",function(req,res){
     console.log("Homepage request.");
-    res.sendFile(__dirname+"/index.html");
+    res.sendFile(__dirname+"/public/index.html");
 });
 
 //knowmore-Homepage
@@ -40,6 +44,11 @@ app.get("/questionnaire",function(req,res){
 //chat-page
 app.get("/chat",function(req,res){
     res.sendFile(__dirname+"/public/chat/chat.html");
+});
+
+//results-page
+app.get("/results",function(req,res){
+    res.sendFile(__dirname+"/public/results/results.html");
 });
 
 

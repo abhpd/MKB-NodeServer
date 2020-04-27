@@ -1,49 +1,55 @@
 html {
     scroll-behavior: smooth;
 }
-a{
+a {
     color: white;
 }
-.all{
+
+.all {
     overflow: hidden;
-    background-color: black;
-    animation: bgcolor 60s linear infinite;
+    background-color: rgb(199, 113, 0);
+    /* animation: bgcolor 60s linear infinite; */
 }
-a:hover{
+
+a:hover {
     color: black;
     text-decoration: none;
 }
-.btn{
+
+.btn {
     width: 130px;
 }
-h1{
+
+h1 {
     color: white;
-    font-family: 'Montserrat-black',sans-serif;
+    font-family: 'Montserrat-black', sans-serif;
     font-weight: 900;
     transform: scale(2.0);
 }
+
 @media screen and (max-width: 768px) {
-    h1{
-        font-size:30px;
+    h1 {
+        font-size: 30px;
     }
 }
-h2{
+
+h2 {
     color: white;
-    font-family: 'Montserrat-black',sans-serif;
+    font-family: 'Montserrat-black', sans-serif;
     font-weight: 400;
     margin-top: 30px;
     margin-bottom: 20px;
 }
 
-.banner{
+.banner {
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
-
-    animation-name:elastic-snap-to-point-from-apple;
-    animation-duration:.8s;
+    animation-name: elastic-snap-to-point-from-apple;
+    animation-duration: .8s;
 }
-.banner h1{
+
+.banner h1 {
     word-wrap: break-word;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
@@ -51,155 +57,107 @@ h2{
     -o-hyphens: auto;
     hyphens: auto;
 }
-.banner-quote{
+
+.banner-quote {
     position: relative;
     bottom: 300px;
     margin-top: 40px;
     transform: scale(2.5);
     font-weight: normal;
 }
-.title{
+
+.title {
     font-weight: bold;
     font-size: 2rem;
 }
-.navbar{
+
+.navbar {
     background-color: none;
     padding-top: 30px;
     padding-right: 10%;
     padding-left: 10%;
     padding-bottom: 30px;
 }
-.navbar h1{
-    font-family: 'Montserrat-black',sans-serif;
+
+.navbar h1 {
+    font-family: 'Montserrat-black', sans-serif;
     font-weight: bolder;
     transform: scale(1);
 }
-.nav-item a{
+
+.nav-item a {
     padding-left: 10px;
     padding-right: 10px;
 }
-.nav-item{
+
+.nav-item {
     margin: 5px;
 }
-.nav-item:hover{
+
+.nav-item:hover {
     color: black;
 }
-#navbarSupportedContent{
+
+#navbarSupportedContent {
     text-align: right;
 }
-.login{
+
+.login {
     margin-top: 10px;
 }
-.footer{
+
+.footer {
     padding-top: 30px;
     padding-bottom: 20px;
     text-align: center;
     color: white;
     margin-bottom: 0px;
 }
-.footer p{
+
+.footer p {
     margin-top: 3%;
 }
-button{
+
+button {
+    vertical-align: middle;
     margin: 10px;
 }
-.cardd{
+
+.btn{
+    width: auto;
+}
+
+.cardd {
     border-radius: 15px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.301);
     margin-left: 3%;
     margin-right: 3%;
     margin-bottom: 3%;
-    padding: 5% 8%;
-
-}
-.cardd a{
-    color: rgb(58, 58, 58);
-}
-.center{
-    text-align: center;
-}
-.selfquestions{
-    margin-top: 0;
-    text-align: center;
-}
-.selfquestions h3{
-    margin:2%;
-    color: black;
-}
-.feeling{
-    color: grey;
-}
-.welcomenote h2{
-    color: black;
-    text-align: center;
-}
-.welcomenote h3{
-    color: grey;
-    text-align: center;
-}
-.about h2{
-    color: black;
-    text-align: center;
-}
-.about h1,.about h3,.about h4{
-    color: grey;
-    text-align: center;
-}
-.about h4{
-    margin-bottom: 30px;
-}
-.learnmore{
-    padding-top: 40px;
-    text-align: center;
-}
-.learnmore a{
-    color: black;
-    padding: 10px;
-    border: solid;
-    border-color: black;
-    border-width: 2px;
-    border-radius: 6px;
-}
-.learnmore a:hover{
-    transition: 0.5s;
-    background-color: black;
-    color: white;
-    padding: 10px;
-    border: solid;
-    border-color: black;
-    border-width: 2px;
-    border-radius: 6px;
-}
-.learnmore a:active{
-    background-color: grey;
-    color: white;
-    padding: 10px;
-    border: solid;
-    border-color: black;
-    border-width: 2px;
-    border-radius: 10%;
-}
-.mission h2{
-    color: black;
-    text-align: center;
-}
-.mission h1,.mission h3,.mission h4{
-    color: grey;
-    text-align: center;
+    padding: 10% 16%;
+    padding-bottom: 8%;
+    backdrop-filter: saturate(180%) blur(20px);
 }
 
-/*knowmore page*/
-.howitworks h1,.howitworks h2,.howitworks h3,.howitworks h5{
-    color: black;
+.cardd h1{
+    color: white;
+    transform: scale(1);
 }
-.howitworks h2{
-    text-align: center;
-    margin-top: 80px;
-    margin-bottom: 50px;
+
+.cardd p{
+    margin-left: 25px;
+    color: white;
 }
-.howitworks h4{
-    color: gray;
-    margin-bottom: 30px;
+
+.row{
+    vertical-align: middle;
+}
+
+.col{
+    /* text-align: center; */
+}
+
+.content {
+    height: auto;
 }
 
 /*@keyframes bgcolor {
@@ -231,10 +189,8 @@ button{
         background-color: #00204a;
     }
 }*/
-
 /*Sample 1*/
-
-/*@keyframes bgcolor { 
+/*@keyframes bgcolor {
     0% {
         background-color: #FF8A65;
     }
@@ -260,9 +216,7 @@ button{
         background-color: #FF8A65;
     }
 }*/
-
 /*Sample 2*/
-
 /*@keyframes bgcolor {
     0% {
         background-color: #E74C3C;
@@ -316,49 +270,118 @@ button{
         background-color: #268bd4;
     }
 }*/
-
 @keyframes bgcolor {
     0% {
         background-color: #E74C3C;
     }
-    14.2%{
+
+    14.2% {
         background-color: rgb(156, 41, 28);
     }
-    28.4%{
+
+    28.4% {
         background-color: rgb(238, 147, 0);
     }
+
     42.6% {
         background-color: #157a29;
     }
-    56.8%{
+
+    56.8% {
         background-color: rgb(96, 163, 19);
     }
+
     71% {
         background-color: rgb(26, 115, 194);
     }
+
     85.2% {
         background-color: #AB47BC;
     }
-    100%{
+
+    100% {
         background-color: #E74C3C;
     }
 }
 
 @keyframes elastic-snap-to-point-from-apple {
-    from { opacity:0; -webkit-transform:translate3d( 210px, -145px, 0); }
-    25%  { opacity:1; -webkit-transform:translate3d( -15.6px, 4.1px, 0); }
-    30%  { opacity:1; -webkit-transform:translate3d( -10.3px, 2.7px, 0); }
-    35%  { opacity:1; -webkit-transform:translate3d( 0, 0, 0); }
-    40%  { opacity:1; -webkit-transform:translate3d( 4.5px, -1.2px, 0); }
-    45%  { opacity:1; -webkit-transform:translate3d( 2.9px, -0.8px, 0); }
-    50%  { opacity:1; -webkit-transform:translate3d( 0, 0, 0); }
-    55%  { opacity:1; -webkit-transform:translate3d( -1.3px, 0.3px, 0); }
-    60%  { opacity:1; -webkit-transform:translate3d( -0.8px, 0.2px, 0); }
-    65%  { opacity:1; -webkit-transform:translate3d( 0, 0, 0); }
-    70%  { opacity:1; -webkit-transform:translate3d( 0.4px, -0.1px, 0); }
-    75%  { opacity:1; -webkit-transform:translate3d( 0.2px, -0.1px, 0); }
-    80%  { opacity:1; -webkit-transform:translate3d( 0, 0, 0); }
-    85%  { opacity:1; -webkit-transform:translate3d( -0.1px, 0, 0); }
-    90%  { opacity:1; -webkit-transform:translate3d( -0.1px, 0, 0); }
-    to   { opacity:1; -webkit-transform:translate3d( 0, 0, 0); }
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(210px, -145px, 0);
+    }
+
+    25% {
+        opacity: 1;
+        -webkit-transform: translate3d(-15.6px, 4.1px, 0);
+    }
+
+    30% {
+        opacity: 1;
+        -webkit-transform: translate3d(-10.3px, 2.7px, 0);
+    }
+
+    35% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+
+    40% {
+        opacity: 1;
+        -webkit-transform: translate3d(4.5px, -1.2px, 0);
+    }
+
+    45% {
+        opacity: 1;
+        -webkit-transform: translate3d(2.9px, -0.8px, 0);
+    }
+
+    50% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+
+    55% {
+        opacity: 1;
+        -webkit-transform: translate3d(-1.3px, 0.3px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(-0.8px, 0.2px, 0);
+    }
+
+    65% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+
+    70% {
+        opacity: 1;
+        -webkit-transform: translate3d(0.4px, -0.1px, 0);
+    }
+
+    75% {
+        opacity: 1;
+        -webkit-transform: translate3d(0.2px, -0.1px, 0);
+    }
+
+    80% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+
+    85% {
+        opacity: 1;
+        -webkit-transform: translate3d(-0.1px, 0, 0);
+    }
+
+    90% {
+        opacity: 1;
+        -webkit-transform: translate3d(-0.1px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+    }
 }
